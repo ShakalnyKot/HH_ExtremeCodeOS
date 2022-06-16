@@ -1,0 +1,29 @@
+# ignore ide configuration folders
+.vs
+.vscode
+.idea
+.ccls
+
+# ignore log files
+*.log
+
+# ignore documentation, it not done yet
+docs
+
+# ignore compiled shit
+compiled
+src/output
+
+# ignore output images
+*.iso
+*.img
+
+# ignore test files
+test.*
+test
+
+# ignore custom scripts
+scripts/*
+
+# ignore ver.h
+src/include/ver.h
