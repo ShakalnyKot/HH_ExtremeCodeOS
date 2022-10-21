@@ -12,13 +12,13 @@ QEMU_SERIAL_OUT = file:serial.log
 include $(MSCRIPTS)
 include src/ver.mk
 
-OUTISOIMG="neonOS-master_v$(GVER).$(LVER).$(PATCH).$(BUILD)_$(ARCH).iso"
+OUTISOIMG="HyperHAL-master_v$(GVER).$(LVER).$(PATCH).$(BUILD)_$(ARCH).iso"
 
 isoimg: all;
 	@mkdir -p compiled/iso;
 	@cp -r data/* compiled/iso;
-	@cp src/output/HyperHAL.elf compiled/iso/neonOS/HyperHAL.elf;
-	@cp src/output/hh_app.bin compiled/iso/neonOS/hh_app.bin;
+	@cp src/output/HyperHAL.elf compiled/iso/HyperHAL/HyperHAL.elf;
+	@cp src/output/hh_app.bin compiled/iso/HyperHAL/hh_app.bin;
 	@grub-mkrescue -o compiled/isoimage.iso compiled/iso;
 	@cp compiled/isoimage.iso $(OUTISOIMG);
 

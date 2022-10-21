@@ -46,19 +46,19 @@
 #define NEOFETCH_OUTPUT \
 "                              New gen.\n" \
 "                              --------------\n" \
-"          ..                  OS: ExtremeCodeOS v1.0.0 Yobkiy\n" \
-"       .+#%%%%*=                Kernel: neonOS HyperHAL\n" \
-"      .#@@@@@%%^     ^*=       Uptime: 15 mins\n" \
-"      *@@@##@@%%-   -%%@%%+      Packages: 0\n" \
-"     :%%@@*. :@@^   ^@@@%%-     Shell: ?\n" \
-"     =@@@^@= #@^ .=%%@@@@#.    Resolution: ?\n" \
-"    .+@@@^--:%%@^+#%%@@@@@@^    DE: ?\n" \
-"  .=+=#@@@=-%%@@%%@@@@@@@@@%%:   Theme: ?\n" \
-"  ==+++@@@@@@@@@@@@@@@@@@@=   Icons: ?\n" \
-"  .+=+=*@@@@@@@@@@@@@@@@@@^   Terminal: ExtremeCodeOS terminal v0.0.1\n" \
-"   .=+++%%@@@@@@@@@@@@@@@@@*   CPU: Unknown i386\n" \
-"       -%%@@@@@@@@@@@@@@@@@*   RAM: ?\n" \
-"       #@@@@@@@@@@@@@@@@@@+   GPU: ?\n" \
+"          ..                  OS: ExtremeCodeOS/HyperHAL v1.0.0 Yobkiy\n" \
+"       .+#%%%%*=                Kernel: HyperHAL\n" \
+"      .#@@@@@%%^     ^*=       Uptime: null seconds\n" \
+"      *@@@##@@%%-   -%%@%%+      Packages: null\n" \
+"     :%%@@*. :@@^   ^@@@%%-     Shell: ExtremeCodeOS Kernel\n" \
+"     =@@@^@= #@^ .=%%@@@@#.    Resolution: Text 80x25\n" \
+"    .+@@@^--:%%@^+#%%@@@@@@^    DE: undefined\n" \
+"  .=+=#@@@=-%%@@%%@@@@@@@@@%%:   Theme: HyperHAL blue/white\n" \
+"  ==+++@@@@@@@@@@@@@@@@@@@=   Icons: undefined\n" \
+"  .+=+=*@@@@@@@@@@@@@@@@@@^   Terminal: Legacy x86 VGA mode 80x25\n" \
+"   .=+++%%@@@@@@@@@@@@@@@@@*   CPU: Unknown x86\n" \
+"       -%%@@@@@@@@@@@@@@@@@*   RAM: undefined\n" \
+"       #@@@@@@@@@@@@@@@@@@+   GPU: undefined\n" \
 "      +@@@@@@@@@@@@@@@@@#.\n" \
 "      -%%@@@@@@@@@@@@@@@#:\n" \
 "       ^@@@@@@@@@@@@@%%^.\n" \
@@ -119,9 +119,10 @@ static req_exit_code_t terminal(terminal_req_t __req){
     case C_EXIT:
         do_halt();
     case C_LS:
-        printf("--r--w--r admin admin 3.6GB porn\n");
+        printf("FS not implemented.\n");
+        /* printf("--r--w--r admin admin 3.6GB porn\n");
         printf("--r--w--r admin admin 53KB kernel.c\n");
-        printf("--r--w--r admin admin 53KB GTAV.exe\n");
+        printf("--r--w--r admin admin 53KB GTAV.exe\n"); */
         break;
     case C_ECHO:
         __req.input[__req.size] = '\0';

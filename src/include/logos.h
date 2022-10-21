@@ -39,14 +39,14 @@ nK:
                 " #    #  \"#    ##m#\"  \"#mm\"   #     #    # #    # #mmmmm\n" \
                 "         m\"    #                                        \n" \
                 "        \"\"     \"                                      \n" \
-                "    ****Warning: neonOS is under construction!!!!****    \n\n"
+                "    ****Warning: under construction!!!!****    \n\n"
 
 #define NK_LOGO "       m    m  \n" \
                 "m mm   #  m\" \n" \
                 "#\"  #  #m#   \n" \
                 "#   #  #  #m   \n" \
                 "#   #  #   \"m\n"  \
-                "    ****Warning: neonOS is under construction!!!!****    \n\n"
+                "    ****Warning: under construction!!!!****    \n\n"
 
 #define NEONOS_LOGO "                              mmmm   mmmm \n" \
                     " m mm    mmm    mmm   m mm   m\"  \"m #\"   \"\n" \
@@ -54,6 +54,6 @@ nK:
                     " #   #  #\"\"\"\"  #   #  #   #  #    #     \"#\n" \
                     " #   #  \"#mm\"  \"#m#\"  #   #   #mm#  \"mmm#\"\n" \
                     "                                                         \n" \
-                    "    ****Warning: neonOS is under construction!!!!****    \n\n"
+                    "    ****Warning: under construction!!!!****    \n\n"
 
 #endif //MAIN_LOGOS_H

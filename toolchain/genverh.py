@@ -1,4 +1,4 @@
-# ver.h generator for neonOS
+# ver.h generator for HyperHAL
 
 import os
 
@@ -23,7 +23,7 @@ template = """// 1 2 3 4 5
 #define BRANCH_NAME "master" // branch name
 
 #endif // !VER_H
-// This file automatically generated for neonOS"""
+// This file automatically generated for HyperHAL"""
 
 vermk_template = """GVER=1
 LVER=2

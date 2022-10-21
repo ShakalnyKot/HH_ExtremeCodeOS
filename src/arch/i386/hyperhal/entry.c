@@ -43,13 +43,13 @@ void _entry(int mb_magic, multiboot_info_t *mb_info)
 	mb_info1 = mb_info; // for oops hhec
 	init_bvideo(WHITE, BLUE);
 #ifdef HEADLESS
-	bputs("This are headless version of neonOS.\nAll system output/input redirected to COM1.\nIf you use QEMU, add to arguments -serial stdio, if you use other VM, set up COM1 port by another way.\n");
+	bputs("This are headless version of HyperHAL.\nAll system output/input redirected to COM1.\nIf you use QEMU, add to arguments -serial stdio, if you use other VM, set up COM1 port by another way.\n");
 #endif
 	disable_cursor();
 	i386_init_serial();
 	serial_printf(NEONOS_LOGO);
 	kmsg("HyperHAL arch bootstrap b%04d\n", BUILD);
-	kmsg("neonOS/%s HyperHAL v%d.%d.%d.%04d:%s compiled %s\n\n", BRANCH_NAME, GVER, LVER, PATCH, BUILD, COMMIT_ID, __TIMESTAMP__);
+	kmsg("HyperHAL/%s HyperHAL v%d.%d.%d.%04d:%s compiled %s\n\n", BRANCH_NAME, GVER, LVER, PATCH, BUILD, COMMIT_ID, __TIMESTAMP__);
 #ifdef HEADLESS
 	kmsg("Running headless mode...\n");
 #endif

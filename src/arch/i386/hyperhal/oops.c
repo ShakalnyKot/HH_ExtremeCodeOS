@@ -183,7 +183,7 @@ void hhib(struct interrupt_frame *frame, const char* msg)
 		}
 		else if(strcmp(b, "ver") == 0)
 		{
-			printf("neonOS v%d.%d.%d.%04d:%s compiled %s\n", GVER, LVER, PATCH, BUILD, COMMIT_ID, __TIMESTAMP__);
+			printf("HyperHAL v%d.%d.%d.%04d:%s compiled %s\n", GVER, LVER, PATCH, BUILD, COMMIT_ID, __TIMESTAMP__);
 			printf("HyperHAL Internal Fault Console b%04d\n", BUILD);
 		}
 		else if(strcmp(b, "hlt") == 0)
@@ -220,7 +220,7 @@ __attribute__((no_caller_saved_registers)) void fault(struct interrupt_frame *fr
 	unlock_printf();
 	bvideo_chgcolor(WHITE, RED);
 	kmsg("\nneonOS v%d.%d.%d.%04d:%s whispers:\n", GVER, LVER, PATCH, BUILD, COMMIT_ID);
-	if(!strcmp(msg, "UNIX syscall (0x80) are used in neonOS"))
+	if(!strcmp(msg, "UNIX syscall (0x80) are used in HyperHAL"))
 		kmsg("System Fault: %s\n\n", msg);
 	else
 		kmsg("CPU Exception: %s\n\n", msg);
@@ -373,7 +373,7 @@ __attribute__((interrupt)) void GeneralProtectionFault_PanicHandler(struct inter
 __attribute__((interrupt)) void PageFault_PanicHandler(struct interrupt_frame *frame) { fault(frame, "Page Fault"); }
 __attribute__((interrupt)) void InvalidOpcode_PanicHandler(struct interrupt_frame *frame) { fault(frame, "Invalid Opcode"); }
 __attribute__((interrupt)) void x87FloatingPointException_PanicHandler(struct interrupt_frame *frame) { fault(frame, "x87 Floating-Point Exception"); }
-__attribute__((interrupt)) void Int80h_PanicHandler(struct interrupt_frame *frame) { fault(frame, "UNIX syscall (0x80) are used in neonOS"); }
+__attribute__((interrupt)) void Int80h_PanicHandler(struct interrupt_frame *frame) { fault(frame, "UNIX syscall (0x80) are used in HyperHAL"); }
 
 // Exeptions handler init
 bool oops_isr_init()

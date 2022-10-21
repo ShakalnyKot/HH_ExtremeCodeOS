@@ -32,7 +32,7 @@ void hhec_entry()
 		}
 		else if(strcmp(b, "ver") == 0)
 		{
-			printf("neonOS v%d.%d.%d.%04d:%s compiled %s\n\n", GVER, LVER, PATCH, BUILD, COMMIT_ID, __TIMESTAMP__);
+			printf("HyperHAL v%d.%d.%d.%04d:%s compiled %s\n\n", GVER, LVER, PATCH, BUILD, COMMIT_ID, __TIMESTAMP__);
 		}
 		else if(strcmp(b, "hlt") == 0)
 			do_halt();

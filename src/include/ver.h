@@ -10,4 +10,4 @@
 #define BRANCH_NAME "master" // branch name
 
 #endif // !VER_H
-// This file automatically generated for neonOS
+// This file automatically generated for HyperHAL

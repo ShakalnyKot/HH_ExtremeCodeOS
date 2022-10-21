@@ -15,4 +15,4 @@ start:
 
 ; teststr: db 'Test stub', 0
 
-teststr2: db 'Idiot! neonOS are not completed, just delete this ISO', 0
+teststr2: db 'Idiot! HyperHAL are not completed, just delete this ISO', 0
