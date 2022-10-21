@@ -27,3 +27,7 @@ scripts/*
 
 # ignore ver.h
 src/include/ver.h
+
+# ignore cross-compiler build dir
+temp_dir
+temp_dir/*

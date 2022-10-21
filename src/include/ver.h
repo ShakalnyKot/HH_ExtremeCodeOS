@@ -1,4 +1,4 @@
-// 0 0 0 148 00c040c
+// 0 0 0 148 a7f55fb
 #ifndef VER_H
 #define VER_H
 
@@ -6,7 +6,7 @@
 #define LVER 0        // Local Version
 #define PATCH 0       // Patch Number
 #define BUILD 148       // Build
-#define COMMIT_ID "00c040c" // Commit ID
+#define COMMIT_ID "a7f55fb" // Commit ID
 #define BRANCH_NAME "master" // branch name
 
 #endif // !VER_H

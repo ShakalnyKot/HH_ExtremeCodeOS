@@ -43,6 +43,31 @@
                               KONEC EPTA!
 
 */
+#ifdef HEADLESS
+#define NEOFETCH_OUTPUT \
+"                              New gen.\n" \
+"                              --------------\n" \
+"          ..                  OS: ExtremeCodeOS/HyperHAL v1.0.0 Yobkiy\n" \
+"       .+#%%%%*=                Kernel: HyperHAL\n" \
+"      .#@@@@@%%^     ^*=       Uptime: null seconds\n" \
+"      *@@@##@@%%-   -%%@%%+      Packages: null\n" \
+"     :%%@@*. :@@^   ^@@@%%-     Shell: ExtremeCodeOS Kernel\n" \
+"     =@@@^@= #@^ .=%%@@@@#.    Resolution: undefined\n" \
+"    .+@@@^--:%%@^+#%%@@@@@@^    DE: undefined\n" \
+"  .=+=#@@@=-%%@@%%@@@@@@@@@%%:   Theme: HyperHAL blue/white\n" \
+"  ==+++@@@@@@@@@@@@@@@@@@@=   Icons: undefined\n" \
+"  .+=+=*@@@@@@@@@@@@@@@@@@^   Terminal: Legacy x86 COM1 serial port\n" \
+"   .=+++%%@@@@@@@@@@@@@@@@@*   CPU: Unknown x86\n" \
+"       -%%@@@@@@@@@@@@@@@@@*   RAM: undefined\n" \
+"       #@@@@@@@@@@@@@@@@@@+   GPU: undefined\n" \
+"      +@@@@@@@@@@@@@@@@@#.\n" \
+"      -%%@@@@@@@@@@@@@@@#:\n" \
+"       ^@@@@@@@@@@@@@%%^.\n" \
+"       .#@@@@@@@@@@%%*-\n" \
+"        :*@@@@@@@%%*-\n" \
+"          =^##*^=:\n" \
+"                              KONEC EPTA!\n"
+#else
 #define NEOFETCH_OUTPUT \
 "                              New gen.\n" \
 "                              --------------\n" \
@@ -65,7 +90,8 @@
 "       .#@@@@@@@@@@%%*-\n" \
 "        :*@@@@@@@%%*-\n" \
 "          =^##*^=:\n" \
-"                              KONEC EPTA!\n" \
+"                              KONEC EPTA!\n"
+#endif
 
 static const char* commands_arr[COMMANDS_COUNT] = {
     "exit",
@@ -164,5 +190,5 @@ void ecos_entry(){
         }
     } 
 
-    return 0;
+    return;
 }

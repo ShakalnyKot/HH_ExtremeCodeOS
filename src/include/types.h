@@ -2,7 +2,7 @@
 #define _TYPES_H
 
 #define DEBUG
-//#define HEADLESS
+// #define HEADLESS
 #define NULL 0
 
 typedef unsigned int size_t;

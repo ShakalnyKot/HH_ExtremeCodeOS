@@ -15,7 +15,7 @@ include src/ver.mk
 OUTISOIMG="HyperHAL-master_v$(GVER).$(LVER).$(PATCH).$(BUILD)_$(ARCH).iso"
 
 isoimg: all;
-	@mkdir -p compiled/iso;
+	@mkdir -p compiled/iso/HyperHAL;
 	@cp -r data/* compiled/iso;
 	@cp src/output/HyperHAL.elf compiled/iso/HyperHAL/HyperHAL.elf;
 	@cp src/output/hh_app.bin compiled/iso/HyperHAL/hh_app.bin;
@@ -50,3 +50,5 @@ clean:
 
 %.py:
 	@$(PY) "scripts/$@"
+
+include toolchain/Makefile
