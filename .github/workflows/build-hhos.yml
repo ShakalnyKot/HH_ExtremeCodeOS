@@ -6,12 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Установка зависимостей
-        run: sudo apt update && sudo apt install xorriso mtools python3 nasm build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo
+        run: sudo apt update && sudo apt install xorriso mtools python3 nasm build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo grub grub-bin-i386 -y
       - name: Чекаем код
         uses: actions/checkout@v3
       - name: Чекаем файлы в директории
         run: ls ${{ github.workspace }}
-      - name: Чекаем от какого юзверя мы работаем
-        run: whoami
-      # - name: Устанавливаем кросс-компилятор
-      #   run:
+      - name: Собираем нашу парашу + устанавливаем кросс-компилятор
+        run: cd ${{ github.workspace }} && make cross-compiler isoimg
