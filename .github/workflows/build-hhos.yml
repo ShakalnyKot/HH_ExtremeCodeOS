@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Установка зависимостей
-        run: sudo apt update && sudo apt install xorriso mtools python3 nasm build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo grub2-common grub-pc-i386 -y
+        run: sudo apt update && sudo apt install xorriso mtools python3 nasm build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo grub2-common grub-pc-bin -y
       - name: Чекаем код
         uses: actions/checkout@v3
       - name: Чекаем файлы в директории
