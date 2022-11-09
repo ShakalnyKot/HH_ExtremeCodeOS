@@ -6,10 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Установка зависимостей
-        run: sudo apt update && sudo apt install xorriso mtools python3 nasm build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo grub2-common grub-pc-bin -y
+        run: sudo apt update && sudo apt install xorriso mtools python3 nasm build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo grub2-common grub-pc-bin gcc-i686-linux-gnu -y
       - name: Чекаем код
         uses: actions/checkout@v3
       - name: Чекаем файлы в директории
         run: ls ${{ github.workspace }}
-      - name: Собираем нашу парашу + устанавливаем кросс-компилятор
-        run: cd ${{ github.workspace }} && make cross-compiler isoimg
+      - name: Собираем нашу парашу
+        run: cd ${{ github.workspace }} && make isoimg
+      - name: Загружаем нашу хуйню
+        uses: actions/upload-artifact@v3
+        with:
+          name: ISO образ
+          path: HyperHAL-master_v0.0.0.148_i386.iso
