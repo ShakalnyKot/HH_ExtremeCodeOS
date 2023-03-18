@@ -6,7 +6,7 @@
 ![Releases](https://img.shields.io/github/downloads/ShakalnyKot/HH_ExtremeCodeOS/latest/total?style=flat-square)
 
 ![Repo Size](https://img.shields.io/github/repo-size/ShakalnyKot/HH_ExtremeCodeOS?style=flat-square)
-![Status](https://img.shields.io/github/workflow/status/ShakalnyKot/HH_ExtremeCodeOS//build-hhos.yml?branch=main&style=flat-square)
+![Status](https://img.shields.io/github/actions/workflow/status/ShakalnyKot/HH_ExtremeCodeOS//build-hhos.yml?branch=main&style=flat-square)
 
 Порт псевдотерминала, вытащенный из ExtremeCodeOS и вкрученный в HyperHAL 
 версии 0.0.0.148
