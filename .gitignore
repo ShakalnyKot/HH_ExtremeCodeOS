@@ -1,8 +1,10 @@
-# ignore ide configuration folders
+# ignore ide configuration dirs/files
 .vs
 .vscode
 .idea
 .ccls
+.clangd
+compile_commands.json
 
 # ignore log files
 *.log
